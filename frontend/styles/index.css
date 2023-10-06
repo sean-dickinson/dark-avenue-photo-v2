@@ -1,84 +1,53 @@
-:root {
-  --body-background: #f2f2f2;
-  --body-color: #444;
-  --heading-color: black;
-  --action-color: #d64045;
+/* Global Styles */
+* {
+  box-sizing: border-box;
 }
 
+/*@font-face {*/
+/*  font-family: 'Typo Round';*/
+/*  src: url('../Typo_Round_Light.otf');*/
+/*  font-weight: normal;*/
+/*}*/
+
 body {
-  background: var(--body-background);
-  color: var(--body-color);
-  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    "Helvetica", "Arial", sans-serif;
-  margin: 0 8px;
-  font-size: 108%;
+  background:#1a1a1a;
+  color: #F8F9FA;
+  font-family: 'Typo Round', serif;
+  margin:0;
   line-height: 1.5;
 }
 
-a {
-  color: var(--action-color);
-  text-decoration: underline;
-  text-decoration-color: #ffb088;
-}
-
-h1 {
-  margin: 1rem 0 3rem;
-  text-align: center;
-  font-weight: 900;
-  font-size: 2.5rem;
-  color: var(--heading-color);
-  line-height: 1.2;
-}
-
-body > header {
-  margin: 1rem;
-  text-align: center;
-}
-
-body > header img {
-  display: inline-block;
-  width: 400px;
-  max-width: 100%;
-}
-
-body > nav ul {
-  margin: 2rem 0;
-  padding: 0;
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  font-size: 1.3rem;
-  font-weight: bold;
-}
-
-body > nav a {
-  text-decoration: none;
+.main-wrapper {
+  display:grid;
+  grid-template-columns: auto;
+  grid-template-rows: 4em auto;
+  grid-template-areas:
+  "nav"
+  "main";
+  height: 100vh;
 }
 
 main {
-  margin: 2rem auto 4rem;
-  max-width: 65rem;
-  min-height: calc(100vh - 200px);
-  padding: 25px 25px 50px;
-  background: white;
-  box-shadow: 2px 3px 3px #ddd;
-  border-radius: 3px;
+  overflow: auto;
+  grid-area: main;
+}
 
-  @media (max-width: 500px) {
-    padding: 16px 16px 50px;
+nav {
+  grid-area: nav;
+}
+
+
+@media screen and (max-width: 600px) {
+  .main-wrapper {
+    grid-template-rows: 6em auto;
   }
 }
 
-footer {
-  text-align: center;
-  margin-bottom: 4rem;
-  font-size: 1em;
-}
-
-hr {
-  border: none;
-  border-top: 2px dotted #bbb;
-  margin: 3rem 0;
+@media screen and (min-width: 1000px){
+  .main-wrapper {
+    grid-template-columns: 250px auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "nav main"
+  }
 }
