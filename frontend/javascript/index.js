@@ -1,5 +1,6 @@
 import "$styles/index.css"
 import "$styles/home.css";
+import "$styles/photos.css";
 
 import images from '../images/**/*.{jpg,jpeg,png,svg}'
 Object.entries(images).forEach(image => image)

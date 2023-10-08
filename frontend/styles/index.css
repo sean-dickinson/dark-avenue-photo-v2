@@ -3,11 +3,11 @@
   box-sizing: border-box;
 }
 
-/*@font-face {*/
-/*  font-family: 'Typo Round';*/
-/*  src: url('../Typo_Round_Light.otf');*/
-/*  font-weight: normal;*/
-/*}*/
+@font-face {
+  font-family: 'Typo Round';
+  src: url('../Typo_Round_Light.otf');
+  font-weight: normal;
+}
 
 body {
   background:#1a1a1a;

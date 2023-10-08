@@ -32,9 +32,17 @@ const build = require("./config/esbuild.defaults.js")
  * @type {BuildOptions}
  */
 const esbuildOptions = {
-  plugins: [
-    // add new plugins here...
-  ],
+      loader: {
+        ".jpg": "file",
+        ".png": "file",
+        ".gif": "file",
+        ".svg": "file",
+        ".woff": "file",
+        ".woff2": "file",
+        ".ttf": "file",
+        ".eot": "file",
+    '.otf': 'file',
+  },
   globOptions: {
     excludeFilter: /\.(dsd|lit)\.css$/
   }

@@ -1,0 +1,9 @@
+---
+layout: default
+template_engine: erb
+---
+<section class="container">
+  <% collections.people.resources.each_with_index do |image, i| %>
+    <img src="<%= image.data.large_url %>" <%= 'lazy' if i > 2  %> />
+  <% end %>
+</section>

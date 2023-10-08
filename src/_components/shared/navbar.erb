@@ -1,17 +1,19 @@
 <nav>
   <div class="logo">
-    <img src="<%= asset_path('images/logo-no-text.png') %>"
-         class="no-text"
-         width="60"
-         height="43" />
-    <img   class="with-text"
-           src="<%= asset_path 'images/logo-small.png' %>"
-           width="132"
-           height="89" />
+    <a href="/">
+      <img src="<%= asset_path('images/logo-no-text.png') %>"
+           class="no-text"
+           width="60"
+           height="43" />
+      <img   class="with-text"
+             src="<%= asset_path 'images/logo-small.png' %>"
+             width="132"
+             height="89" />
+    </a>
   </div>
   <div class="categories">
-    <% %w[people places things].each do |word| %>
-      <a href="#"><%= word %></a>
+    <% links.each do |link| %>
+      <a href="<%= link[:href] %>"><%= link[:name] %></a>
     <% end %>
   </div>
 </nav>
