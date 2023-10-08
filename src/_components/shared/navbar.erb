@@ -1,14 +1,18 @@
 <nav>
   <div class="logo">
     <a href="/">
-      <img src="<%= asset_path('images/logo-no-text.png') %>"
-           class="no-text"
-           width="60"
-           height="43" />
-      <img   class="with-text"
-             src="<%= asset_path 'images/logo-small.png' %>"
-             width="132"
-             height="89" />
+      <picture>
+        <source srcset="<%= asset_path('images/logo-no-text.png')%>"
+                media="(max-width: 999px)"
+                width="60"
+                height="43"
+        />
+
+      <img src="<%= asset_path 'images/logo-small.png' %>"
+           width="132"
+           height="89" />
+      </picture>
+
     </a>
   </div>
   <div class="categories">

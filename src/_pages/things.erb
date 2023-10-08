@@ -4,6 +4,8 @@ template_engine: erb
 ---
 <section class="container">
   <% collections.things.resources.each_with_index do |image, i| %>
-    <img src="<%= image.data.large_url %>" <%= 'lazy' if i > 2  %> />
+    <div class="photo">
+      <%= render Images::ResponsiveImage.new(image_data: image.data, lazy: i > 2) %>
+    </div>
   <% end %>
 </section>

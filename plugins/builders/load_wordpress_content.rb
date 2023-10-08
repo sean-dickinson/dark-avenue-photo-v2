@@ -23,6 +23,7 @@ class Builders::LoadWordpressContent < SiteBuilder
       rest_route: "/wp/v2/posts",
       orderby: "slug",
       categories: category[:id],
+      per_page: 100,
       _embed: true
     }
     get BASE_URL, **params do |data|

@@ -9,16 +9,6 @@ nav {
     grid-area: nav;
 }
 
-.with-text {
-    display: none;
-    visibility: hidden;
-}
-
-.no-text {
-    display: inline;
-    visibility: visible;
-}
-
 .logo {
     display: flex;
     justify-content: center;
@@ -66,16 +56,6 @@ a.active::after {
     nav,
     .categories {
         flex-direction: column;
-    }
-
-    .no-text {
-        display: none;
-        visibility: hidden;
-    }
-
-    .with-text {
-        display: inline;
-        visibility: visible;
     }
 
     .logo {

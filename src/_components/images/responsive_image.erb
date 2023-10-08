@@ -1,0 +1,9 @@
+<img
+  class="responsive-image"
+  src="<%= src %>"
+  srcset="<%= src_set %>"
+  sizes="(min-width: 1000px) 50vw, (max-width: 999px) 90vw"
+  width="<%= width %>"
+  height="<%= height %>"
+  <%= 'lazy' if lazy? %>
+  alt="<%= alt %>" />

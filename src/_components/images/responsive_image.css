@@ -1,0 +1,13 @@
+.responsive-image {
+    height: 100%;
+    width:100%;
+    max-height: 80vh;
+    max-width: 50vw;
+    object-fit: contain;
+}
+
+@media screen and (max-width:600px) {
+    .responsive-image {
+        max-width: 90vw;
+    }
+}
